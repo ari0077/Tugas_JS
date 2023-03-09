@@ -1,15 +1,31 @@
-
-    var luas;
-var keliling;
-var alas;
-var tinggi;
-var sisiMiring;
-function hitung() {
- alas = parseFloat(document.getElementById("ipt_alas").value);
- tinggi = parseFloat(document.getElementById("ipt_tinggi").value);
- luas = alas * tinggi;
- sisiMiring = 3/4 * alas;
- keliling = 2 * (alas + sisiMiring);
- document.getElementById('opt_luas').value = luas;
- document.getElementById('opt_keliling').value = keliling;
-}
+<!-- segiempat.html -->
+<!DOCTYPE html">
+<html>
+     <head>
+          <title>Menghitung luas dan keliling jajar genjang</title>
+          <br>Rumus nya adalah Alas X Tinggi</br>
+          <script type="text/javascript">
+               function hitungLuasKeliling()
+               {
+                    var Alas, Tinggi, Keliling, Luas;
+ 
+                    Alas = parseInt(document.getElementById("alas").value);
+                    Tinggi = parseInt(document.getElementById("tinggi").value);
+                    Keliling = 2 * (Alas + Tinggi);
+                    Luas = Alas * Tinggi;
+                    document.getElementById("keliling").value = Keliling;
+                    document.getElementById("luas").value = Luas;
+               }
+          </script>
+     </head>
+     <body>
+          <h1>Menghitung luas dan keliling jajar genjang</h1>
+          <form>
+               <p>alas: <input type="text" id="alas"></p>
+               <p>tinggi: <input type="text" id="tinggi"></p>
+               <p><input type="button" value="Hitung" onclick="hitungLuasKeliling();"> </p>
+               <p>Luas: <input type="text" id="luas"></p>
+               <p>Keliling: <input type="text" id="keliling"></p>
+          </form>
+     </body>
+</html>
