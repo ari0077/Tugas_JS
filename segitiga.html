@@ -1,0 +1,31 @@
+
+<!DOCTYPE html">
+<html>
+     <head>
+          <title>Menghitung luas dan keliling segitiga</title>
+          <br>Rumus nya adalah Alas X Tinggi : 2</br>
+          <script type="text/javascript">
+               function hitungLuasKeliling()
+               {
+                    var Alas, Tinggi, Keliling, Luas;
+ 
+                    Alas = parseInt(document.getElementById("alas").value);
+                    Tinggi = parseInt(document.getElementById("tinggi").value);
+                    Keliling = 2 * (Alas + Tinggi);
+                    Luas = (Alas * Tinggi) / 2;
+                    document.getElementById("keliling").value = Keliling;
+                    document.getElementById("luas").value = Luas;
+               }
+          </script>
+     </head>
+     <body>
+          <h1>Menghitung luas dan keliling segitiga</h1>
+          <form>
+               <p>Alas: <input type="text" id="alas"></p>
+               <p>Tinggi: <input type="text" id="tinggi"></p>
+               <p><input type="button" value="Hitung" onclick="hitungLuasKeliling();"> </p>
+               <p>Luas: <input type="text" id="luas"></p>
+               <p>Keliling: <input type="text" id="keliling"></p>
+          </form>
+     </body>
+</html>
