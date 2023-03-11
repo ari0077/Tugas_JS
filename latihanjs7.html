@@ -1,0 +1,39 @@
+<script>
+//ada pelanggan membeli barang elektronik
+    //barang barangnya misal ada TV=> 3juta, motor => 12 juta, kulkas => 4 juta
+    //tentukan pembelian barangnya apa dan berapa yg beli
+
+    let pegawai = "arindo";
+    let jabatan = "manager";
+    let status = "bebas"
+
+    let gaji = 0;
+    switch(jabatan){
+        case 'manager' : gaji = 10000000; break;
+        case 'AS manager' : gaji = 8000000; break;
+        case 'staff' : gaji = 5000000; break;
+        default: gaji = 0;
+    }
+    let tunjanganjabatan = 10 / 100;
+    let bpjs = 10 / 100
+    let tunjanganmenikah = 10 / 100
+    let gajitotal = gaji * tunjanganjabatan * bpjs * tunjanganmenikah;
+    
+
+    //membuat diskon untuk 3 produk di atas
+    let ttltunjangan1 = 0;
+    if (jabatan == 'manager') bpjs = 0.3 * gajitotal;
+    else if (jabatan == 'AS manager') diskon = 0.2 * gajitotal;
+    else if (jabatan == 'staff') 
+    else ttltunjangan1 = gaji * gajitotal * tunjanganjabatan;
+
+    document.write("data pembelian" +
+    "<br> pegawai : " + pegawai +
+    "<br> jabatan : " + jabatan +
+    "<br> tunjangan jabatan : " + tunjanganjabatan +
+    "<br> bpjs : " + bpjs +
+    "<br> tunjangan menikah : " + tunjanganmenikah +
+    "<br> gaji : " + gaji +
+    "<br> gaji total : " + gajitotal 
+    );
+</script>
