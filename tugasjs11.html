@@ -25,7 +25,7 @@
               for (p of person){
                   let keterangan = (p.nilai >= 60)? "lulus" : "gagal";
                   //set grade A-E
-                  document.write(`<tr bgcolor="">
+                  document.write(`<tr bgcolor="red">
               <td>${no++}</td>
               <td>${p.nama}</td>
               <td>${p.nilai}</td>
@@ -37,8 +37,8 @@
   </table>
 </h3>
 <script>
-  let siswa = "hendra";
-  let nilai = 90;
+  let siswa = "ali";
+  let nilai = 85;
   let grade = "";
 
   if (nilai > 85 && nilai <= 100) grade = "A";
